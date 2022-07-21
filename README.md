@@ -1,8 +1,11 @@
 # Daily-journal-blog
+```
+
 Dynamic Node js App that can add more inputs to the Home page.
 Easy to navigate.
 Built using node.js, express.js, EJS and  Bootstrap.
 Deployed by heroku.com.
+```
 *****************************************************************************************
 To access the app visit the following link : https://gentle-wildwood-71447.herokuapp.com/
 ****************************************************************************************
