@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+
+<h1>Delete</h1>
+<form  action="/delete" method="post">
+  <div class="mb-3">
+    <label for="inputTitle" class="form-label">Title</label>
+    <input type="text" class="form-control" id="inputTitle" name = "postTitle">
+  </div>
+  <button class = "btn btn-primary mb-3" type="submit" name="button">Remove</button>
+</form>
+
+<%- include("partials/footer") -%>

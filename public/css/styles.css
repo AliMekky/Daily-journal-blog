@@ -43,11 +43,12 @@
   white-space: nowrap;
 }
 
-.addBtn{
+.homeBtn{
   background-color: #1abc9c;
   border : none;
+  width : 7rem;
   color : white;
   border-radius: 50%;
-  margin-top : 5rem;
+  margin : 5rem 5rem 5rem 0;
   padding : 1rem;
 }

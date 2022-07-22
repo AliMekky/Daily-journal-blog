@@ -33,6 +33,10 @@ app.get("/compose",function(req,res){
   res.render("compose");
 })
 
+app.get("/delete",function(req,res){
+  res.render("delete");
+})
+
 app.get("/posts/:topic",function(req,res){
   var found = false;
   const key = lodash.lowerCase(req.params.topic);
@@ -58,8 +62,27 @@ app.post("/compose",function(req,res){
   res.redirect("/");
 })
 
+app.post("/delete",function(req,res){
+  const title = req.body.postTitle;
+  const index = posts.indexOf(title);
+  for(let i = 0;i<posts.length;i++){
+    if(title == posts[i].title){
+      posts.splice(i,1);
+    }
+  }
+  console.log(posts);
+  res.redirect("/");
+})
+
 app.post("/",function(req,res){
-  res.redirect("/compose");
+  console.log(req.body.button);
+  if(req.body.button == 1){
+    res.redirect("/compose");
+  }
+  else if (req.body.button == 2) {
+    res.redirect("/delete");
+  }
+
 })
 
 
